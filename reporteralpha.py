@@ -6,10 +6,10 @@ import datetime
 import os
 
 # insert your Telegram bot token here
-bot = telebot.TeleBot('BOT-TOKEN')
+bot = telebot.TeleBot('7299779165:AAHgZItxKJ_Q90L2DNQ2n1OWLShatndxueQ')
 
 # Admin user IDs
-admin_id = ["YOUR-UID"]
+admin_id = ["5338045956"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -50,7 +50,7 @@ allowed_user_ids = read_users()
 def log_command(user_id, target, port, time):
     user_info = bot.get_chat(user_id)
     if user_info.username:
-        username = "@" + user_info.username
+        username = "@DDOSMAKER" + user_info.username
     else:
         username = f"UserID: {user_id}"
     
@@ -284,7 +284,7 @@ def show_help(message):
 To See Admin Commands:
 /admincmd : Shows All Admin Commands.
 
-Buy From :- @ReporterAlpha
+Buy From :- @DDOSMAKER
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -301,7 +301,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''👋🏻Welcome, {user_name}!
 Try To Run This Command : /help 
-Join :- t.me/ChannelLink'''
+Join :- t.me/+BgFUs_vNU35kYzRl'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
@@ -317,7 +317,7 @@ def welcome_plan(message):
     response = f'''{user_name}, we only have powerful plan!!:
 
 Vip :
-Attack Time : 180 (S)
+Attack Time : 1000 (S)
 After Attack Limit : No Limit
 Concurrents Attack : 3
 
@@ -325,7 +325,7 @@ Price Lists :
 Day : 300 Rs
 Week : 1000 Rs
 Month : 2000 Rs
-'''
+DM FOR BUY: @DDOSMAKER'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['admincmd'])
@@ -339,7 +339,7 @@ def welcome_plan(message):
 /logs : All Users Logs.
 /broadcast : Broadcast a Message.
 /clearlogs : Clear The Logs File.
-'''
+DM: @DDOSMAKER'''
     bot.reply_to(message, response)
 
 
